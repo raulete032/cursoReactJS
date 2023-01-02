@@ -1,39 +1,41 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 
 
-const Greetingf = (props) => {
+const GreetingF = (props) => {
 
-    // Breve introducción a useState
-    // const [variable, método para actualizarlo] = useState(valor inicial)
-    const [age, setage] = useState(29);
+    /**Breve introducción a useState */
+    //const [variable, metodo para actualizar]= useState(valor inicial);
 
-    const birthday = () => {
-        // actualizamos el State
-        setage(age + 1);
+    const [age, setAge] = useState(29);
+
+    const birthday= ()=>{
+        //Actualiza el State
+        setAge(age + 1);
     }
 
     return (
         <div>
-            <h1>
-                ¡HOLA { props.name } desde componente funcional !
-            </h1>
-            <h2>
-                Tu edad es de: { age }
-            </h2>
-            <div>
-                <button onClick={birthday}>
-                    Cumplir años
-                </button>
+                <h1>
+                    HOLA {props.name} desde componente funcional!
+                </h1>
+                <h2>Tu edad es de: {age}</h2>
+
+                <div>
+                    <button onClick={birthday}>
+                        Cumplir años
+                    </button>
+                </div>
             </div>
-        </div>
     );
 };
 
 
-Greetingf.propTypes = {
-    name: PropTypes.string
+
+
+GreetingF.propTypes = {
+    name: PropTypes.string,
 };
 
 
-export default Greetingf;
+export default GreetingF;
