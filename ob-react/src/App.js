@@ -5,28 +5,23 @@ import './App.css';
 // import TaskListComponent from './components/container/taskListComponent';
 import ContactoA from './components/container/contactoA';
 import { Contacto } from './models/contacto.class';
+import Ejemplo1 from './hooks/Ejemplo1';
+import Ejemplo2 from './hooks/Ejemplo2';
+import MiComponenteConContexto from './hooks/Ejemplo3';
+import Ejemplo4 from './hooks/Ejemplo4';
 
 function App() {
-
-  const contactoPrueba= new Contacto('Raul', 'Carneros', 'rcr_032@hotmail.com', false);
-
-
+  
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        {/*Componente propio Greeting.jsx */}
-        {/* <Greeting name={'Raúl'}></Greeting> */}
-
-        {/**Componente de ejemplo funcional */}
-        {/* <GreetingF name={'Raúl'}></GreetingF> */}
-
-        {/**Componente de listado de Tareas */}
         
-        {/* <TaskListComponent></TaskListComponent> */}
-
-        <ContactoA contacto={contactoPrueba}></ContactoA>
-        
+        <Ejemplo4 nombre='Raúl'>
+        {/** Todo lo que hay aquí, es tratado como props.children  */}
+          <h3>Contenido del props.children</h3>
+          <p>Hola mundo</p>
+        </Ejemplo4>
 
       </header>
     </div>
