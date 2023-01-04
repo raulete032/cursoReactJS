@@ -31,15 +31,17 @@ function App() {
         {/**Ejemplo de HOOKS */}
 
         {/* <Ejemplo1></Ejemplo1> */}
+
+
         {/* <Ejemplo2></Ejemplo2> */}
         {/* <MiComponenteConContexto></MiComponenteConContexto> */}
         
-        {/* <Ejemplo4 nombre='Raúl'> */}
+        <Ejemplo4 nombre='Raúl'>
         {/** Todo lo que hay aquí, es tratado como props.children  */}
-          {/* <h3>Contenido del props.children</h3>
-          <p>Hola mundo</p> */}
-        {/* </Ejemplo4> */}
-
+          <h3>Contenido del props.children</h3>
+          <p>Hola mundo</p>
+        </Ejemplo4>
+ 
       </header>
     </div>
   );

@@ -5,7 +5,7 @@
  * privado a través de un hook y, además, poder modificarlo
  */
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const Ejemplo1 = () => {
 
@@ -27,6 +27,16 @@ const Ejemplo1 = () => {
     const [contador, setContador]= useState(valorInicial);
     const [persona, setPersona] = useState(personaInicial);
 
+
+    /****************** */
+
+    useEffect(() => {
+        document.getElementById('nombre').value='';
+    }, [persona]);
+
+
+    /****************** */
+
     /**
      * Función para actualizar el estado privado que contiene el contador
      */
@@ -39,9 +49,12 @@ const Ejemplo1 = () => {
      * Función para actualizar el estado de persona en el componente
      */
     function actualizarPersona(){
+
+        let nombre= document.getElementById('nombre').value;
+
         setPersona(
             {
-                nombre: 'Pepe',
+                nombre: nombre,
                 email: 'pepe@hotmail.com'
             }
         )
@@ -55,6 +68,12 @@ const Ejemplo1 = () => {
             <p>Nombre: {persona.nombre}</p>
             <p>Email: {persona.email}</p>
             {/**Bloque de botones para actualizar el estado del componente */}
+
+
+            {/** */}
+            <input id='nombre' type='text' placeholder='Nombre'></input>
+            <br></br>
+            {/** */}
 
             <button onClick={incrementarContador}>Incrementar contador</button>
             <button onClick={actualizarPersona}>Actualizar persona</button>
