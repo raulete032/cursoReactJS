@@ -6,6 +6,7 @@
 
 import React, { Component, useEffect } from 'react';
 
+/**COMPONENTE CLASS */
 export class DidMount extends Component {
 
     componentDidMount(){
@@ -25,14 +26,7 @@ export class DidMount extends Component {
     }
 }
 
-
-
-
-
-
-
-
-
+/**COMPONENTE FUNCIÓN */
 export const DidMountHook = () => {
 
 

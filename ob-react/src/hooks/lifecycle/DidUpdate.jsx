@@ -6,6 +6,8 @@
 
 import React, { Component, useEffect } from 'react';
 
+
+/**COMPONENTE CLASS */
 export class DidUpdate extends Component {
 
     componentDidUpdate(){
@@ -23,7 +25,7 @@ export class DidUpdate extends Component {
 
 
 
-
+/**COMPONENTE FUNCIÓN */
 export const DidUpdateHook = () => {
 
     useEffect(() => {
@@ -36,4 +38,6 @@ export const DidUpdateHook = () => {
         </div>
     );
 }
+
+
 
